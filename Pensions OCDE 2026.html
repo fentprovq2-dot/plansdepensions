@@ -1,0 +1,449 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>Pensions OCDE 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: columna editorial de lectura (~68ch) amb gràfics que s'eixamplen a 960px; franges numerades per capítol de l'informe */
+:root{
+  --bg:#F3EEE4;          /* pergamí */
+  --surface:#FBF8F2;
+  --fg:#1E2629;
+  --muted:#5E625F;
+  --rule:#D8CDB9;
+  --garnet:#8E2A3B;
+  --petrol:#007C99;
+  --petrol-soft:#D5E6E9;
+  --grid:rgba(30,38,41,.09);
+  --f-display:"Fraunces",Georgia,"Times New Roman",serif;
+  --f-body:"Inter",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  --f-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#161B1D;--surface:#1E2528;--fg:#ECE6DA;--muted:#A6A79F;--rule:#36403F;
+  --garnet:#D65E70;--petrol:#00A3BF;--petrol-soft:#123A42;--grid:rgba(236,230,218,.09);color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#161B1D;--surface:#1E2528;--fg:#ECE6DA;--muted:#A6A79F;--rule:#36403F;
+  --garnet:#D65E70;--petrol:#00A3BF;--petrol-soft:#123A42;--grid:rgba(236,230,218,.09);color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--f-body);font-size:16px;line-height:1.6;
+  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:0 64px}
+.wrap{max-width:960px;margin:0 auto}
+.read{max-width:68ch}
+h1,h2,h3{font-family:var(--f-display);font-weight:600;text-wrap:balance;margin:0;line-height:1.15}
+p{margin:0}
+a{color:var(--petrol)}
+a:focus-visible,button:focus-visible,summary:focus-visible{outline:2px solid var(--petrol);outline-offset:2px}
+
+/* capçalera */
+.mast{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap;
+  border-bottom:2px solid var(--fg);padding-block:22px 10px;font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase}
+.mast b{font-family:var(--f-display);font-size:20px;letter-spacing:0;text-transform:none;font-weight:700}
+.mast span{color:var(--muted)}
+.hero{padding-block:44px 28px;display:grid;gap:18px}
+.eyebrow{font-family:var(--f-mono);font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--garnet)}
+.hero h1{font-size:clamp(34px,6vw,60px);font-weight:600;letter-spacing:-.015em;max-width:16ch}
+.hero h1 em{font-style:italic;color:var(--garnet);font-weight:400}
+.lede{font-size:19px;line-height:1.55;max-width:60ch}
+.byline{font-family:var(--f-mono);font-size:12px;color:var(--muted)}
+
+/* xifres clau */
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));border-top:1px solid var(--rule);border-bottom:1px solid var(--rule);margin-block:8px 8px}
+.kpi{padding:18px 16px 18px 0;display:grid;gap:4px;align-content:start}
+.kpi+.kpi{padding-left:16px;border-left:1px solid var(--rule)}
+.kpi .n{font-family:var(--f-display);font-size:34px;font-weight:600;line-height:1;font-variant-numeric:tabular-nums}
+.kpi .n small{font-size:18px;font-weight:400}
+.kpi .l{font-size:13px;color:var(--muted);line-height:1.4}
+@media (max-width:640px){.kpi+.kpi{border-left:0;padding-left:0}.kpi{border-bottom:1px solid var(--rule)}.kpis{grid-template-columns:1fr 1fr}.kpi:nth-child(even){padding-left:12px;border-left:1px solid var(--rule)}}
+
+/* seccions */
+section{padding-block:52px 8px;display:grid;gap:18px}
+.sh{display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:baseline;border-top:1px solid var(--fg);padding-top:14px}
+.sh .no{font-family:var(--f-mono);font-size:12px;color:var(--garnet);letter-spacing:.08em}
+.sh h2{font-size:clamp(25px,3.6vw,34px)}
+.sh .ch{grid-column:2;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.prose{display:grid;gap:14px}
+.prose strong{font-weight:600}
+
+/* figures */
+figure{margin:0;background:var(--surface);border:1px solid var(--rule);border-radius:3px;padding:18px 18px 14px;display:grid;gap:12px;min-width:0;align-content:start}
+.fh{display:flex;justify-content:space-between;align-items:flex-start;gap:12px;flex-wrap:wrap}
+.fh h3{font-size:19px;font-weight:600}
+.fh .sub{font-size:13px;color:var(--muted);margin-top:3px}
+.seg{display:inline-flex;border:1px solid var(--rule);border-radius:3px;overflow:hidden;flex-wrap:wrap}
+.seg button{font:500 12.5px var(--f-body);background:transparent;color:var(--fg);border:0;padding:7px 11px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--rule)}
+.seg button[aria-pressed="true"]{background:var(--fg);color:var(--surface)}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font-size:12.5px;color:var(--muted)}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:2px;margin-right:6px;vertical-align:-1px}
+.legend i.dot{border-radius:50%;width:9px;height:9px;vertical-align:0}
+.legend i.ring{border-radius:50%;width:9px;height:9px;background:transparent!important;border:2px solid var(--fg);vertical-align:0}
+.cbox{position:relative;width:100%}
+figcaption{font-size:12px;color:var(--muted);line-height:1.5;border-top:1px solid var(--rule);padding-top:10px}
+figcaption b{font-family:var(--f-mono);font-weight:500;font-size:11px;letter-spacing:.05em;text-transform:uppercase;color:var(--fg)}
+details.data summary{cursor:pointer;font-family:var(--f-mono);font-size:11.5px;color:var(--petrol);letter-spacing:.04em}
+.tw{overflow-x:auto;margin-top:8px;max-height:340px;overflow-y:auto}
+table{border-collapse:collapse;font-size:13px;width:100%;font-variant-numeric:tabular-nums}
+th,td{padding:5px 10px 5px 0;text-align:right;border-bottom:1px solid var(--rule);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{font-weight:600;font-size:12px;color:var(--muted);position:sticky;top:0;background:var(--surface)}
+
+/* graella de dues columnes */
+.two{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:18px;align-items:start}
+.two>*{min-width:0}
+
+/* nivells d'actius */
+.tiers{display:grid;gap:0}
+.tier{display:grid;grid-template-columns:120px 1fr;gap:12px;padding-block:10px;border-bottom:1px solid var(--rule)}
+.tier .k{font-family:var(--f-mono);font-size:12px}
+.tier .k span{display:block;font-family:var(--f-display);font-size:22px;font-weight:600}
+.chips{display:flex;flex-wrap:wrap;gap:5px;align-content:flex-start}
+.chip{font-size:12.5px;padding:2px 8px;border-radius:2px;background:var(--petrol-soft);color:var(--fg)}
+.chip.es{background:var(--garnet);color:var(--surface);font-weight:600}
+@media (max-width:520px){.tier{grid-template-columns:1fr}}
+
+/* requadre Espanya */
+.es-box{border-left:4px solid var(--garnet);background:var(--surface);padding:20px 22px;display:grid;gap:14px}
+.es-box h3{font-size:22px}
+.facts{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 22px}
+.fact{display:grid;gap:3px;align-content:start}
+.fact .n{font-family:var(--f-display);font-size:28px;font-weight:600;color:var(--garnet);line-height:1.05;font-variant-numeric:tabular-nums}
+.fact p{font-size:14px;line-height:1.45}
+.note{font-size:13px;color:var(--muted)}
+
+/* llista de polítiques */
+.steps{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:0 24px;counter-reset:s}
+.steps li{list-style:none;padding:12px 0;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:28px 1fr;gap:6px;font-size:14.5px;line-height:1.45}
+.steps li::before{counter-increment:s;content:"";width:8px;height:8px;background:var(--garnet);margin-top:7px}
+.steps{padding:0;margin:0}
+.cols3{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:22px}
+.col{display:grid;gap:10px;align-content:start;border-top:3px solid var(--petrol);padding-top:12px}
+.col h3{font-size:19px}
+.col .big{font-family:var(--f-display);font-size:40px;font-weight:600;line-height:1}
+.col .big small{font-size:18px;color:var(--muted);font-weight:400}
+.col p{font-size:14.5px;line-height:1.5}
+.tbl-gap td:nth-child(2),.tbl-gap th:nth-child(2),.tbl-gap td:nth-child(3),.tbl-gap th:nth-child(3){color:var(--muted)}
+.bar-in{display:inline-block;height:8px;background:var(--petrol);border-radius:0 2px 2px 0;vertical-align:middle;margin-right:8px}
+.meth{font-size:13.5px;color:var(--muted);display:grid;gap:10px;max-width:75ch}
+.meth b{color:var(--fg)}
+footer{margin-top:52px;border-top:2px solid var(--fg);padding-top:14px;font-family:var(--f-mono);font-size:11.5px;color:var(--muted);display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+@media (prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important}}
+</style>
+
+<div class="wrap">
+  <header class="mast"><span>Pensions · Informe de dades · Novembre 2026</span></header>
+
+  <div class="hero">
+    <div class="eyebrow">OCDE · Pensions Outlook 2026</div>
+    <h1>Estalviem prou per a la <em>jubilació?</em></h1>
+    <p class="lede">Els fons que financen pensions han arribat a un rècord de 78 bilions de dòlars a l'OCDE, més que tot el PIB de l'àrea. Però l'OCDE conclou que, en 40 dels 41 països que analitza, algun grup de treballadors no arribarà a una pensió suficient només amb el sistema obligatori.</p>
+    <p class="byline">Font: OCDE (2026), <i>OECD Pensions Outlook 2026: Are We Saving Enough for Retirement?</i> · doi.org/10.1787/a51aa775-en · Adaptació i traducció d'Estat del Món</p>
+  </div>
+
+  <div class="kpis" role="list">
+    <div class="kpi" role="listitem"><div class="n">78 <small>bilions $</small></div><div class="l">Actius per a pensions a l'OCDE, final de 2025</div></div>
+    <div class="kpi" role="listitem"><div class="n">105,6<small>%</small></div><div class="l">del PIB de l'OCDE (62,2% el 2001)</div></div>
+    <div class="kpi" role="listitem"><div class="n">+11,3<small>%</small></div><div class="l">Creixement dels actius el 2025; van pujar en 36 de 38 països</div></div>
+    <div class="kpi" role="listitem"><div class="n">19 <small>de 38</small></div><div class="l">Països amb plans de pensions obligatoris o quasi obligatoris</div></div>
+    <div class="kpi" role="listitem"><div class="n">40 <small>de 41</small></div><div class="l">Països on algun grup té una bretxa de cotització</div></div>
+  </div>
+
+  <!-- 1 -->
+  <section id="actius">
+    <div class="sh"><span class="no">01</span><h2>Un rècord d'actius molt mal repartit</h2><span class="ch">Capítol 1 · Mercats de pensions</span></div>
+    <div class="prose read">
+      <p>Els actius que respalden pensions futures (fons de pensions, assegurances, plans personals i reserves públiques) han crescut entre quatre i cinc vegades des de començament de segle. El 2025 van sumar <strong>78 bilions de dòlars</strong>, dels quals 70,4 bilions corresponen a gestores privades i 7,3 bilions a fons de reserva públics, com el Fons de Reserva de la Seguretat Social espanyol. Les caigudes de 2008 i 2022 es van recuperar en pocs anys.</p>
+      <p>Els Estats Units concentren 51,8 bilions, prop de dos terços del total mundial. Només vuit països superen el 100% del PIB, mentre que 17 països de l'OCDE, entre els quals Espanya, no arriben al 20%.</p>
+    </div>
+    <figure>
+      <div class="fh">
+        <div><h3>Actius de pensions a l'OCDE, 2001–2025</h3><div class="sub" id="f1sub">Bilions de dòlars corrents, final d'any</div></div>
+        <div class="seg" role="group" aria-label="Unitat"><button type="button" id="f1-usd" aria-pressed="true">Bilions USD</button><button type="button" id="f1-gdp" aria-pressed="false">% del PIB</button></div>
+      </div>
+      <div class="legend" id="f1leg"><span><i style="background:var(--petrol)"></i>Gestores de pensions</span><span><i style="background:var(--garnet)"></i>Fons de reserva públics</span></div>
+      <div class="cbox" style="height:320px"><canvas id="c1" aria-label="Gràfic d'evolució dels actius de pensions de l'OCDE"></canvas></div>
+      <figcaption><b>Font</b> OCDE, Global Pension Statistics (fig. 1.1). En català, 1 bilió = 10<sup>12</sup> (el <i>trillion</i> anglès). El % del PIB inclou gestores i fons de reserva sobre el PIB conjunt de l'OCDE.</figcaption>
+    </figure>
+    <figure>
+      <div class="fh"><div><h3>Actius de les gestores de pensions, % del PIB (final de 2025)</h3><div class="sub">Països de l'OCDE agrupats per tram, segons la fig. 1.3 de l'informe</div></div></div>
+      <div class="tiers">
+        <div class="tier"><div class="k"><span>&gt; 100%</span>8 països</div><div class="chips"><span class="chip">Dinamarca</span><span class="chip">Islàndia</span><span class="chip">Suïssa</span><span class="chip">Canadà</span><span class="chip">Estats Units</span><span class="chip">Austràlia</span><span class="chip">Països Baixos</span><span class="chip">Suècia</span></div></div>
+        <div class="tier"><div class="k"><span>50–100%</span>4 països</div><div class="chips"><span class="chip">Israel</span><span class="chip">Regne Unit</span><span class="chip">Finlàndia</span><span class="chip">Xile</span></div></div>
+        <div class="tier"><div class="k"><span>20–50%</span>9 països</div><div class="chips"><span class="chip">Costa Rica</span><span class="chip">Nova Zelanda</span><span class="chip">Corea</span><span class="chip">Bèlgica</span><span class="chip">Colòmbia</span><span class="chip">Japó</span><span class="chip">Irlanda</span><span class="chip">Letònia</span><span class="chip">Mèxic</span></div></div>
+        <div class="tier"><div class="k"><span>&lt; 20%</span>17 països</div><div class="chips"><span class="chip">Estònia</span><span class="chip">Eslovàquia</span><span class="chip">Lituània</span><span class="chip">Portugal</span><span class="chip">Itàlia</span><span class="chip">Polònia</span><span class="chip es">Espanya</span><span class="chip">Noruega</span><span class="chip">Txèquia</span><span class="chip">Eslovènia</span><span class="chip">Àustria</span><span class="chip">Alemanya</span><span class="chip">Hongria</span><span class="chip">Turquia</span><span class="chip">Luxemburg</span><span class="chip">Grècia</span></div></div>
+      </div>
+      <figcaption><b>Nota</b> L'informe xifra en 17 els països per sota del 20%, però la llista de la fig. 1.3 n'anomena 16; França no apareix en cap tram del gràfic. Turquia té un 3,4% del PIB tot i créixer molt en termes nominals. L'ordre dins de cada tram segueix el de l'OCDE.</figcaption>
+    </figure>
+  </section>
+
+  <!-- 2 -->
+  <section id="creixement">
+    <div class="sh"><span class="no">02</span><h2>Aportacions i rendiments, els dos motors</h2><span class="ch">Capítol 1 · Fluxos d'entrada i sortida</span></div>
+    <div class="prose read">
+      <p>Els actius creixen quan les aportacions i els rendiments superen les prestacions pagades. Els sistemes més joves, com els de Turquia o Grècia, creixen més de pressa perquè parteixen de nivells baixos, i la inflació també infla les taxes nominals. Als Països Baixos els actius van baixar un 3,1% el 2025 pels mals resultats d'inversió, i a Luxemburg un 7,4% per la liquidació d'un fons ocupacional.</p>
+      <p>Les aportacions han crescut gairebé a tot arreu des dels anys 2000. Espanya és l'excepció a llarg termini: les seves aportacions han caigut de mitjana, tot i que des de 2023 remunten (+9% el 2023, +10,9% el 2024 i +3,3% el 2025).</p>
+    </div>
+    <figure>
+      <div class="fh">
+        <div><h3 id="f2title">Creixement nominal dels actius, 2025</h3><div class="sub">Gestores de pensions, països de l'OCDE, en %</div></div>
+        <div class="seg" role="group" aria-label="Indicador"><button type="button" id="f2-a" aria-pressed="true">Actius</button><button type="button" id="f2-c" aria-pressed="false">Aportacions</button></div>
+      </div>
+      <div class="legend"><span><i style="background:var(--petrol)"></i>2025</span><span><i class="dot" style="background:var(--fg)"></i>Mitjana anual a llarg termini</span><span><i style="background:var(--garnet)"></i>Espanya</span></div>
+      <div class="cbox" id="c2box" style="height:720px"><canvas id="c2" aria-label="Creixement per país"></canvas></div>
+      <details class="data"><summary>Mostra la taula de dades</summary><div class="tw" id="t2"></div></details>
+      <figcaption><b>Font</b> OCDE, Global Pension Statistics (fig. 1.2A i 1.11A). Mitjana geomètrica en moneda local des de 2001, 2005 o 2010 segons la disponibilitat. Sense punt: l'OCDE no publica la mitjana. Turquia (+75,8% en actius, +80,1% en aportacions) surt de l'escala. Valors llegits dels gràfics vectorials (precisió ±0,2 punts).</figcaption>
+    </figure>
+  </section>
+
+  <!-- 3 -->
+  <section id="rendiments">
+    <div class="sh"><span class="no">03</span><h2>Rendiments reals i comissions</h2><span class="ch">Capítol 1 · Ingressos d'inversió</span></div>
+    <div class="prose read">
+      <p>En els últims deu anys, el rendiment real (descomptada la inflació i les despeses d'inversió) va ser positiu en 24 dels 31 països de l'OCDE amb dades. El 2025 Polònia va destacar amb un 30,7%, mentre que els Països Baixos i Luxemburg van tancar en negatiu. Espanya va obtenir un 3,6% real el 2025, però la seva mitjana de deu anys amb prou feines arriba al 0,8%.</p>
+      <p>Les comissions redueixen directament el capital acumulat. Entre els plans de contribució definida que reporten a l'OCDE, els fons de pensions personals espanyols cobren un 1,2% anual sobre actius. Entre els països de l'OCDE de la taula, és el nivell més alt juntament amb la Txèquia, i només el supera Turquia (1,4%).</p>
+    </div>
+    <div class="two">
+      <figure>
+        <div class="fh"><div><h3>Rendiment real net, 2025</h3><div class="sub">Gestores de pensions de l'OCDE, en %</div></div></div>
+        <div class="legend"><span><i style="background:var(--petrol)"></i>2025</span><span><i class="dot" style="background:var(--fg)"></i>Mitjana 10 anys</span><span><i class="ring"></i>Mitjana 20 anys</span></div>
+        <div class="cbox" style="height:700px"><canvas id="c3" aria-label="Rendiments reals per país"></canvas></div>
+        <details class="data"><summary>Mostra la taula de dades</summary><div class="tw" id="t3"></div></details>
+        <figcaption><b>Font</b> OCDE (fig. 1.14A). Polònia (30,7%) surt de l'escala. Valors aproximats llegits del gràfic.</figcaption>
+      </figure>
+      <figure>
+        <div class="fh"><div><h3>Comissions als plans de contribució definida, 2025</h3><div class="sub">% dels actius totals</div></div></div>
+        <div class="legend"><span><i style="background:var(--petrol)"></i>País de l'OCDE</span><span><i style="background:var(--petrol-soft);outline:1px solid var(--petrol)"></i>Fora de l'OCDE</span><span><i style="background:var(--garnet)"></i>Espanya</span></div>
+        <div class="cbox" style="height:520px"><canvas id="c4" aria-label="Comissions per país"></canvas></div>
+        <figcaption><b>Font</b> OCDE, taula 1.4. Espanya: fons de pensions personals; Eslovàquia sense dada el 2025. Les estructures de comissió difereixen: sobre actius, sobre aportacions (Colòmbia) o mixtes.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <!-- 4 -->
+  <section id="bretxa">
+    <div class="sh"><span class="no">04</span><h2>La bretxa de cotització</h2><span class="ch">Capítol 2 · Aportacions suficients</span></div>
+    <div class="prose read">
+      <p>L'OCDE calcula quin percentatge del salari caldria aportar cada any a un pla voluntari de contribució definida per arribar a una pensió objectiu: el <strong>80%</strong> de l'últim salari per als sous baixos, el <strong>70%</strong> per al salari mitjà i el <strong>60%</strong> per als sous alts. La diferència respecte del que promet el sistema obligatori és la <em>bretxa de cotització</em>.</p>
+      <p>Per a un home assalariat amb salari mitjà, la bretxa supera el 10% del salari en 17 dels 41 països i el 15% a Croàcia, Irlanda, Corea, Lituània i Polònia. És més gran per a les dones en 17 països, per la seva esperança de vida més llarga o per una edat de jubilació més primerenca, i per als autònoms en 31.</p>
+      <p>Espanya és un dels nou països amb bretxa zero per al treballador assalariat mitjà: la pensió pública promet una taxa de substitució d'almenys el 70%. Però un autònom espanyol amb ingressos mitjans hauria d'estalviar prop d'un <strong>13,9%</strong> dels ingressos. L'OCDE adverteix que les bretxes són estimacions mínimes, perquè suposen carreres completes i que les regles actuals no canviaran.</p>
+    </div>
+    <figure>
+      <div class="fh">
+        <div><h3 id="f5title">Bretxa de cotització, homes assalariats amb salari mitjà</h3><div class="sub">Aportació voluntària necessària, % del salari</div></div>
+        <div class="seg" role="group" aria-label="Grup de treballadors"><button type="button" id="f5-g" aria-pressed="true">Homes assalariats</button><button type="button" id="f5-s" aria-pressed="false">Dones i homes</button><button type="button" id="f5-e" aria-pressed="false">Assalariats i autònoms</button></div>
+      </div>
+      <div class="legend" id="f5leg"></div>
+      <div class="cbox" id="c5box" style="height:760px"><canvas id="c5" aria-label="Bretxa de cotització per país"></canvas></div>
+      <details class="data"><summary>Mostra la taula de dades</summary><div class="tw" id="t5"></div></details>
+      <figcaption id="f5cap"><b>Font</b> OCDE (fig. 2.1, 2.3 i 2.4), a partir de les taxes de substitució teòriques de <i>Pensions at a Glance 2025</i>. Supòsits: carrera completa des dels 22 anys, rendiment real del 2,5%, comissions de l'1% i renda vitalícia en jubilar-se. Valors llegits dels gràfics vectorials (precisió ±0,2 punts).</figcaption>
+    </figure>
+    <figure>
+      <div class="fh"><div><h3>Bretxa mitjana per categoria de treballador</h3><div class="sub">Mitjana entre els països amb bretxa positiva (taula 2.1)</div></div></div>
+      <div class="tw" style="max-height:none">
+        <table class="tbl-gap">
+          <thead><tr><th>Categoria</th><th>Objectiu</th><th>Països amb bretxa</th><th>Bretxa mitjana</th></tr></thead>
+          <tbody id="t21"></tbody>
+        </table>
+      </div>
+    </figure>
+    <div class="prose read">
+      <p>Per què no n'hi ha prou amb l'estalvi voluntari? Joves, persones amb ingressos baixos, dones i autònoms participen menys en els plans complementaris. A més, la gent tendeix a quedar-se en les aportacions mínimes o per defecte. En 9 dels 19 països de l'OCDE on només hi ha plans voluntaris, menys de la meitat de la població en edat de treballar hi participa. A Espanya, el 54% dels comptes de plans d'ocupació no van rebre cap aportació el 2024.</p>
+    </div>
+  </section>
+
+  <!-- 5 -->
+  <section id="espanya">
+    <div class="sh"><span class="no">05</span><h2>Què diu l'informe d'Espanya</h2><span class="ch">Lectura transversal</span></div>
+    <div class="es-box">
+      <h3>Un sistema públic generós, un pilar privat mínim</h3>
+      <div class="facts">
+        <div class="fact"><div class="n">0%</div><p>Bretxa de cotització per a l'assalariat mitjà: el sistema públic ja promet una taxa de substitució de com a mínim el 70%.</p></div>
+        <div class="fact"><div class="n">≈13,9%</div><p>Aportació voluntària que necessitaria un autònom amb ingressos mitjans per arribar al mateix objectiu.</p></div>
+        <div class="fact"><div class="n">&lt; 20%</div><p>Actius de les gestores de pensions sobre el PIB, en el grup més baix de l'OCDE.</p></div>
+        <div class="fact"><div class="n">54%</div><p>Comptes de plans d'ocupació sense cap aportació el 2024. Dels que en van rebre, el 68% no va passar de 900 €.</p></div>
+        <div class="fact"><div class="n">1,2%</div><p>Comissió anual sobre actius dels fons de pensions personals, entre les més altes de l'OCDE.</p></div>
+        <div class="fact"><div class="n">+3 p.p.</div><p>Augment previst de la despesa pública en pensions sobre el PIB fins al 2050, com a Corea, Lituània, Luxemburg i Eslovènia.</p></div>
+        <div class="fact"><div class="n">&gt; 25%</div><p>Cotització efectiva al sistema obligatori per al salari mitjà: Espanya és un dels sis països de l'OCDE que superen el 25% (mitjana: 18,8%). Deixa poc marge per a l'estalvi voluntari.</p></div>
+        <div class="fact"><div class="n">2020–21</div><p>Mínims del Fons de Reserva de la Seguretat Social, que s'ha tornat a nodrir recentment.</p></div>
+      </div>
+      <p class="note">L'informe dona dades estatals; no desagrega per comunitats autònomes, de manera que no permet aïllar Catalunya ni la resta dels Països Catalans. Altres referències a Espanya: la simplificació de l'oferta de plans (2022), la deducció del 10% a l'impost de societats per aportacions empresarials a favor de treballadors amb menys de 27.000 € bruts, i un experiment en una gran entitat financera on destinar automàticament la meitat dels augments salarials al pla d'empresa va fer créixer les aportacions un 19–31% en un any.</p>
+    </div>
+  </section>
+
+  <!-- 6 -->
+  <section id="politiques">
+    <div class="sh"><span class="no">06</span><h2>Tres fronts de política</h2><span class="ch">Capítols 3, 4 i 5</span></div>
+    <div class="cols3">
+      <div class="col">
+        <h3>Riscos de sostenibilitat</h3>
+        <div class="big">41 <small>de 53</small></div>
+        <p>Jurisdiccions que obliguen els fons de pensions o les asseguradores a integrar els riscos de sostenibilitat en la inversió i la gestió de riscos.</p>
+        <p>La regulació és el factor que més pesa, seguida del deure fiduciari i de la pressió dels grans inversors. Les avaluacions de materialitat no estan estandarditzades, i la qualitat i la cobertura de les dades són el principal obstacle, sobretot en mercats petits i actius privats.</p>
+      </div>
+      <div class="col">
+        <h3>Assessorament financer</h3>
+        <div class="big">4 <small>eines</small></div>
+        <p>Registre i qualificació dels assessors, deure de diligència, obligacions de transparència i límits a la remuneració. Totes milloren el resultat dels qui reben assessorament.</p>
+        <p>El risc és encarir-lo i allunyar-lo de qui més el necessita. Quan l'assessorament no és accessible, l'OCDE proposa alternatives: estratègies d'inversió per defecte ben triades, orientació personalitzada per a preguntes simples i responsabilitat del proveïdor sobre l'adequació del producte.</p>
+      </div>
+      <div class="col">
+        <h3>Herència dels plans</h3>
+        <div class="big">0,74<small>% PIB</small></div>
+        <p>Pagaments anuals per defunció a Finlàndia, el màxim de la mostra. A Espanya representen un 0,03% del PIB.</p>
+        <p>L'OCDE demana coherència fiscal abans i després de la mort, perquè els plans no acabin servint per transmetre patrimoni amb avantatges fiscals en lloc de pagar pensions.</p>
+      </div>
+    </div>
+    <figure>
+      <div class="fh"><div><h3>Pagaments per defunció dels plans de pensions</h3><div class="sub">% del PIB, 2025 o últim any disponible</div></div></div>
+      <div class="cbox" style="height:280px"><canvas id="c6" aria-label="Pagaments per defunció per país"></canvas></div>
+      <figcaption><b>Font</b> OCDE (fig. 5.1). Inclou pensions de supervivència, capitals per defunció i reemborsaments del saldo als hereus. Dades de 2024 per a Bèlgica, Espanya i Suïssa. Valors aproximats llegits del gràfic.</figcaption>
+    </figure>
+    <div class="prose read"><p><strong>Com tancar la bretxa.</strong> L'OCDE proposa sis grans vies:</p></div>
+    <ul class="steps">
+      <li>Augmentar les cotitzacions obligatòries.</li>
+      <li>Fomentar les aportacions voluntàries de les empreses.</li>
+      <li>Empènyer amb opcions per defecte, adhesió automàtica, recordatoris i tràmits simples.</li>
+      <li>Oferir incentius fiscals o no fiscals.</li>
+      <li>Informar de les aportacions i de la pensió esperada.</li>
+      <li>Adaptar el disseny a les necessitats: estalvi d'emergència, aportacions al cònjuge.</li>
+    </ul>
+  </section>
+
+  <section id="metode">
+    <div class="sh"><span class="no">—</span><h2>Nota metodològica</h2></div>
+    <div class="meth">
+      <p><b>Origen de les xifres.</b> Totes les dades procedeixen de l'<i>OECD Pensions Outlook 2026</i>. Les xifres del text i de les taules (1.4, 2.1) i les etiquetes de la figura 1.1 es reprodueixen tal com les publica l'OCDE. Els valors per país de les figures 1.2, 1.11, 1.14, 2.1, 2.3, 2.4 i 5.1 s'han obtingut mesurant les barres i els punts dels gràfics vectorials del PDF, calibrats amb les marques dels eixos. Quan el text de l'informe dona una xifra exacta (Luxemburg, Països Baixos, Turquia, Polònia, aportacions a Espanya), s'ha fet servir aquesta. La precisió estimada és de ±0,2 punts; per a una citació exacta convé consultar els fulls de càlcul dels StatLink de l'OCDE.</p>
+      <p><b>Conceptes.</b> <i>Actius de pensions</i>: actius de fons de pensions, asseguradores, bancs i gestores que financen plans de pensions, més les reserves dels sistemes públics de repartiment. <i>Taxa de substitució</i>: pensió inicial sobre l'últim salari. <i>Contribució definida</i>: plans en què la pensió depèn del que s'ha aportat i dels rendiments obtinguts.</p>
+      <p><b>Llicència.</b> Obra original de l'OCDE sota CC BY 4.0. Aquesta és una adaptació d'una obra original de l'OCDE. Les opinions i els arguments que s'hi expressen no s'han de presentar com a opinions oficials de l'OCDE ni dels seus països membres. En cas de discrepància, només és vàlid el text original.</p>
+    </div>
+  </section>
+
+  <footer><span>Dades: OCDE, Pensions Outlook 2026</span></footer>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+<script>
+const D = {"years":[2001,2002,2003,2004,2005,2006,2007,2008,2009,2010,2011,2012,2013,2014,2015,2016,2017,2018,2019,2020,2021,2022,2023,2024,2025],"prov":[15.3,15.3,18.5,20.7,22.3,25.4,28.2,23.1,26.3,29.2,30.0,32.9,36.4,37.5,36.9,38.5,44.3,42.8,49.0,54.8,59.8,52.2,58.0,62.9,70.4],"pprf":[1.5,1.8,2.3,2.6,2.8,3.2,4.0,3.9,4.2,4.8,5.0,5.2,5.2,5.3,5.3,5.5,6.0,5.8,6.2,6.7,6.9,6.3,6.9,6.9,7.3],"gdp":[62.2,56.9,61.2,62.1,68.3,70.5,71.2,60.2,68.5,73.6,73.7,77.7,83.9,89.0,89.8,93.2,96.5,91.9,101.2,111.4,114.5,95.7,98.3,104.5,105.6],"assets":[{"c":"Turquia","v":75.8,"lt":45.2},{"c":"Polònia","v":34.2,"lt":13.8},{"c":"Mèxic","v":20.5,"lt":12.3},{"c":"Grècia","v":20.0,"lt":31.5},{"c":"Xile","v":18.1,"lt":9.9},{"c":"Lituània","v":16.6,"lt":16.2},{"c":"Israel","v":16.1,"lt":11.3},{"c":"Estònia","v":15.1,"lt":16.2},{"c":"Eslovàquia","v":13.6,"lt":11.3},{"c":"Letònia","v":13.6,"lt":29.5},{"c":"Colòmbia","v":13.6,"lt":17.2},{"c":"Costa Rica","v":13.1,"lt":null},{"c":"Corea","v":12.7,"lt":13.8},{"c":"Canadà","v":10.7,"lt":6.4},{"c":"Estats Units","v":10.7,"lt":6.4},{"c":"Austràlia","v":10.2,"lt":8.9},{"c":"Nova Zelanda","v":9.7,"lt":9.9},{"c":"Hongria","v":8.2,"lt":null},{"c":"Txèquia","v":8.2,"lt":10.8},{"c":"Eslovènia","v":7.7,"lt":10.4},{"c":"Islàndia","v":7.7,"lt":10.4},{"c":"Noruega","v":7.7,"lt":7.9},{"c":"Suïssa","v":6.8,"lt":null},{"c":"França","v":6.8,"lt":null},{"c":"Suècia","v":6.3,"lt":10.4},{"c":"Àustria","v":6.3,"lt":null},{"c":"Portugal","v":5.8,"lt":null},{"c":"Finlàndia","v":5.3,"lt":null},{"c":"Regne Unit","v":4.8,"lt":4.5},{"c":"Irlanda","v":4.8,"lt":null},{"c":"Itàlia","v":4.3,"lt":8.9},{"c":"Espanya","v":2.8,"lt":2.0},{"c":"Japó","v":2.3,"lt":2.5},{"c":"Dinamarca","v":2.3,"lt":6.4},{"c":"Bèlgica","v":1.9,"lt":null},{"c":"Alemanya","v":0.9,"lt":5.5},{"c":"Països Baixos","v":-3.1,"lt":5.5},{"c":"Luxemburg","v":-7.4,"lt":6.9}],"contrib":[{"c":"Turquia","v":80.1,"lt":null},{"c":"Portugal","v":26.8,"lt":null},{"c":"Alemanya","v":25.0,"lt":6.9},{"c":"Corea","v":21.4,"lt":null},{"c":"Polònia","v":21.0,"lt":5.0},{"c":"Mèxic","v":19.6,"lt":11.2},{"c":"Dinamarca","v":14.1,"lt":5.8},{"c":"Lituània","v":13.7,"lt":15.6},{"c":"Hongria","v":12.6,"lt":-0.1},{"c":"Israel","v":10.4,"lt":10.2},{"c":"Islàndia","v":9.7,"lt":9.8},{"c":"Itàlia","v":9.3,"lt":6.9},{"c":"Països Baixos","v":7.5,"lt":5.8},{"c":"Xile","v":7.2,"lt":9.1},{"c":"Canadà","v":6.1,"lt":5.8},{"c":"Eslovènia","v":4.2,"lt":2.5},{"c":"Suïssa","v":3.9,"lt":3.6},{"c":"Espanya","v":3.3,"lt":-4.8},{"c":"Nova Zelanda","v":2.8,"lt":9.8},{"c":"Eslovàquia","v":2.4,"lt":3.2},{"c":"Txèquia","v":2.0,"lt":null},{"c":"Finlàndia","v":1.3,"lt":null},{"c":"Letònia","v":0.9,"lt":13.1},{"c":"Costa Rica","v":0.9,"lt":null},{"c":"Regne Unit","v":0.9,"lt":null},{"c":"Noruega","v":-1.6,"lt":4.7},{"c":"Bèlgica","v":-2.3,"lt":2.5},{"c":"Àustria","v":-4.9,"lt":null},{"c":"Estònia","v":-7.4,"lt":6.9},{"c":"Luxemburg","v":-10.3,"lt":6.5}],"returns":[{"c":"Polònia","v":30.7,"a10":3.0,"a20":null},{"c":"Costa Rica","v":11.6,"a10":6.2,"a20":4.9},{"c":"Israel","v":11.0,"a10":5.5,"a20":4.6},{"c":"Mèxic","v":11.0,"a10":2.0,"a20":2.1},{"c":"Xile","v":10.6,"a10":2.3,"a20":2.7},{"c":"Turquia","v":8.8,"a10":-2.7,"a20":-0.3},{"c":"Austràlia","v":7.3,"a10":4.0,"a20":3.8},{"c":"Finlàndia","v":7.1,"a10":3.5,"a20":null},{"c":"Colòmbia","v":5.9,"a10":2.9,"a20":4.0},{"c":"Suïssa","v":5.9,"a10":2.9,"a20":2.6},{"c":"Estats Units","v":5.4,"a10":2.1,"a20":0.9},{"c":"Hongria","v":5.1,"a10":0.1,"a20":null},{"c":"Noruega","v":4.6,"a10":2.2,"a20":2.9},{"c":"Estònia","v":4.3,"a10":0.1,"a20":-0.8},{"c":"Corea","v":3.9,"a10":null,"a20":null},{"c":"França","v":3.7,"a10":null,"a20":null},{"c":"Regne Unit","v":3.7,"a10":null,"a20":null},{"c":"Espanya","v":3.6,"a10":0.8,"a20":null},{"c":"Itàlia","v":3.2,"a10":0.3,"a20":0.9},{"c":"Eslovàquia","v":3.2,"a10":-0.5,"a20":null},{"c":"Canadà","v":3.1,"a10":3.1,"a20":3.9},{"c":"Lituània","v":2.4,"a10":0.3,"a20":null},{"c":"Dinamarca","v":2.3,"a10":1.8,"a20":2.5},{"c":"Txèquia","v":2.3,"a10":-2.7,"a20":-1.3},{"c":"Grècia","v":2.2,"a10":1.8,"a20":null},{"c":"Letònia","v":2.2,"a10":-1.1,"a20":-1.0},{"c":"Eslovènia","v":2.0,"a10":0.5,"a20":null},{"c":"Islàndia","v":1.8,"a10":3.0,"a20":2.1},{"c":"Portugal","v":1.6,"a10":0.3,"a20":1.0},{"c":"Bèlgica","v":1.4,"a10":0.4,"a20":1.7},{"c":"Alemanya","v":1.3,"a10":0.3,"a20":1.4},{"c":"Àustria","v":1.0,"a10":-0.2,"a20":0.2},{"c":"Luxemburg","v":-1.6,"a10":-0.8,"a20":0.1},{"c":"Països Baixos","v":-5.4,"a10":-0.3,"a20":1.6}],"gap":[{"c":"Lituània","v":20.7},{"c":"Irlanda","v":19.5},{"c":"Polònia","v":17.3},{"c":"Croàcia","v":15.7},{"c":"Corea","v":15.6},{"c":"Japó","v":15.0},{"c":"Canadà","v":14.4},{"c":"Eslovènia","v":12.6},{"c":"Letònia","v":12.3},{"c":"Estònia","v":12.3},{"c":"Suïssa","v":12.2},{"c":"Austràlia","v":11.7},{"c":"Estats Units","v":11.4},{"c":"Alemanya","v":11.2},{"c":"Bèlgica","v":10.7},{"c":"Israel","v":10.5},{"c":"Islàndia","v":10.1},{"c":"Txèquia","v":9.8},{"c":"Noruega","v":9.4},{"c":"Regne Unit","v":9.1},{"c":"Xile","v":8.9},{"c":"Hongria","v":7.3},{"c":"França","v":6.3},{"c":"Romania","v":5.7},{"c":"Finlàndia","v":4.7},{"c":"Bulgària","v":4.5},{"c":"Nova Zelanda","v":4.4},{"c":"Eslovàquia","v":4.0},{"c":"Suècia","v":2.2},{"c":"Costa Rica","v":2.0},{"c":"Turquia","v":0.4},{"c":"Mèxic","v":0.3},{"c":"Àustria","v":0},{"c":"Colòmbia","v":0},{"c":"Dinamarca","v":0},{"c":"Grècia","v":0},{"c":"Itàlia","v":0},{"c":"Luxemburg","v":0},{"c":"Països Baixos","v":0},{"c":"Portugal","v":0},{"c":"Espanya","v":0}],"sex":[{"c":"Polònia","m":17.3,"w":25.9},{"c":"Corea","m":15.5,"w":18.4},{"c":"Japó","m":15.0,"w":17.6},{"c":"Canadà","m":14.4,"w":15.7},{"c":"Suïssa","m":12.3,"w":13.4},{"c":"Austràlia","m":11.8,"w":13.7},{"c":"Estats Units","m":11.5,"w":12.1},{"c":"Israel","m":10.5,"w":15.7},{"c":"Islàndia","m":10.2,"w":10.8},{"c":"Noruega","m":9.5,"w":10.0},{"c":"Regne Unit","m":9.2,"w":9.7},{"c":"Xile","m":8.9,"w":9.5},{"c":"Hongria","m":7.4,"w":10.2},{"c":"Nova Zelanda","m":4.5,"w":5.1},{"c":"Costa Rica","m":2.0,"w":4.1},{"c":"Turquia","m":0.6,"w":1.7},{"c":"Mèxic","m":0.2,"w":0.2}],"self":[{"c":"Lituània","e":20.7,"s":21.0},{"c":"Polònia","e":17.4,"s":22.1},{"c":"Croàcia","e":15.8,"s":19.8},{"c":"Corea","e":15.5,"s":16.1},{"c":"Japó","e":15.0,"s":24.9},{"c":"Eslovènia","e":12.6,"s":16.9},{"c":"Letònia","e":12.3,"s":16.5},{"c":"Estònia","e":12.3,"s":12.3},{"c":"Suïssa","e":12.2,"s":20.9},{"c":"Austràlia","e":11.7,"s":17.9},{"c":"Alemanya","e":11.2,"s":22.6},{"c":"Bèlgica","e":10.8,"s":11.7},{"c":"Israel","e":10.4,"s":13.0},{"c":"Islàndia","e":10.1,"s":10.4},{"c":"Txèquia","e":9.7,"s":11.6},{"c":"Noruega","e":9.4,"s":10.8},{"c":"Regne Unit","e":9.2,"s":17.0},{"c":"Xile","e":8.9,"s":14.8},{"c":"Hongria","e":7.4,"s":7.1},{"c":"França","e":6.4,"s":8.5},{"c":"Romania","e":5.7,"s":7.0},{"c":"Nova Zelanda","e":4.3,"s":13.0},{"c":"Eslovàquia","e":4.1,"s":5.7},{"c":"Suècia","e":2.3,"s":8.8},{"c":"Costa Rica","e":1.9,"s":6.4},{"c":"Mèxic","e":0.3,"s":22.6},{"c":"Grècia","e":0.0,"s":16.1},{"c":"Països Baixos","e":0.0,"s":13.9},{"c":"Espanya","e":0.0,"s":13.9},{"c":"Dinamarca","e":0.0,"s":9.2},{"c":"Itàlia","e":0.0,"s":8.3},{"c":"Portugal","e":0.0,"s":4.7}],"fees":[{"c":"Albània","v":1.7,"t":"A","o":false},{"c":"Rep. Dominicana","v":1.5,"t":"C","o":false},{"c":"Sèrbia","v":1.4,"t":"C","o":false},{"c":"Turquia","v":1.4,"t":"C","o":true},{"c":"Espanya","v":1.2,"t":"A","o":true},{"c":"Txèquia","v":1.2,"t":"C","o":true},{"c":"Bulgària","v":1.1,"t":"C","o":false},{"c":"Perú","v":1.0,"t":"C","o":false},{"c":"Eslovènia","v":0.8,"t":"A","o":true},{"c":"Xile","v":0.8,"t":"C","o":true},{"c":"Hongria","v":0.7,"t":"C","o":true},{"c":"Mèxic","v":0.5,"t":"A","o":true},{"c":"Liechtenstein","v":0.5,"t":"C","o":false},{"c":"Macedònia del Nord","v":0.5,"t":"C","o":false},{"c":"Estònia","v":0.5,"t":"C","o":true},{"c":"Maldives","v":0.4,"t":"A","o":false},{"c":"Lituània","v":0.4,"t":"A","o":true},{"c":"Austràlia","v":0.4,"t":"C","o":true},{"c":"Polònia","v":0.4,"t":"C","o":true},{"c":"Costa Rica","v":0.3,"t":"A","o":true},{"c":"Colòmbia","v":0.3,"t":"B","o":true},{"c":"Romania","v":0.3,"t":"C","o":false},{"c":"Kazakhstan","v":0.2,"t":"C","o":false}],"death":[{"c":"Finlàndia","v":0.74},{"c":"Suïssa","v":0.65},{"c":"Països Baixos","v":0.59},{"c":"Austràlia","v":0.32},{"c":"Xile","v":0.29},{"c":"Dinamarca","v":0.19},{"c":"Portugal","v":0.17},{"c":"Nova Zelanda","v":0.06},{"c":"Bèlgica","v":0.04},{"c":"Bulgària","v":0.04},{"c":"Espanya","v":0.03},{"c":"Txèquia","v":0.03},{"c":"Romania","v":0.01},{"c":"Israel","v":0.01},{"c":"Hongria","v":0.01},{"c":"Letònia","v":0.01},{"c":"Colòmbia","v":0.01},{"c":"Croàcia","v":0.01}]};
+const fmt=(v,d=1)=>v==null?'—':v.toLocaleString('ca-ES',{minimumFractionDigits:d,maximumFractionDigits:d});
+const css=n=>getComputedStyle(document.documentElement).getPropertyValue(n).trim();
+const charts={};
+function base(){
+  Chart.defaults.font.family=css('--f-body');Chart.defaults.font.size=12;
+  Chart.defaults.color=css('--muted');Chart.defaults.borderColor=css('--grid');
+}
+const tip=()=>({backgroundColor:css('--fg'),titleColor:css('--surface'),bodyColor:css('--surface'),titleFont:{weight:'600'},padding:10,cornerRadius:3,displayColors:false});
+const ES='Espanya';
+const tickFont=(labels)=>({font:(c)=>({weight:labels[c.index]===ES?'700':'400',size:12}),color:(c)=>labels[c.index]===ES?css('--garnet'):css('--fg'),autoSkip:false});
+
+/* 1. evolució */
+let f1mode='usd';
+function drawC1(){
+  charts.c1?.destroy();
+  const ctx=document.getElementById('c1');
+  const yrs=D.years.map(String);
+  let cfg;
+  if(f1mode==='usd'){
+    cfg={type:'bar',data:{labels:yrs,datasets:[
+      {label:'Gestores de pensions',data:D.prov,backgroundColor:css('--petrol'),borderRadius:0,borderSkipped:false,stack:'a',borderColor:css('--surface'),borderWidth:{top:1}},
+      {label:'Fons de reserva públics',data:D.pprf,backgroundColor:css('--garnet'),borderRadius:{topLeft:3,topRight:3},borderSkipped:false,stack:'a',borderColor:css('--surface'),borderWidth:{bottom:1}}]},
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{...tip(),callbacks:{label:c=>`${c.dataset.label}: ${fmt(c.raw)} bilions $`,footer:it=>`Total: ${fmt(it.reduce((a,b)=>a+b.raw,0))} bilions $`}}},
+        scales:{x:{stacked:true,grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:9}},y:{stacked:true,beginAtZero:true,ticks:{callback:v=>v}}}}};
+  }else{
+    cfg={type:'line',data:{labels:yrs,datasets:[{label:'% del PIB',data:D.gdp,borderColor:css('--petrol'),backgroundColor:css('--petrol-soft'),fill:true,borderWidth:2,pointRadius:(c)=>c.dataIndex===D.gdp.length-1?4:0,pointBackgroundColor:css('--petrol'),tension:0}]},
+      options:{maintainAspectRatio:false,interaction:{mode:'index',intersect:false},plugins:{legend:{display:false},tooltip:{...tip(),callbacks:{label:c=>`${fmt(c.raw)}% del PIB`}}},
+        scales:{x:{grid:{display:false},ticks:{maxRotation:0,autoSkip:true,maxTicksLimit:9}},y:{min:0,max:120,ticks:{callback:v=>v+'%'}}}}};
+  }
+  charts.c1=new Chart(ctx,cfg);
+  document.getElementById('f1sub').textContent=f1mode==='usd'?'Bilions de dòlars corrents, final d\'any':'Gestores i fons de reserva sobre el PIB de l\'OCDE, en %';
+  document.getElementById('f1leg').hidden=f1mode!=='usd';
+}
+
+/* barres horitzontals + punts */
+function hbar(id,rows,{val,dots=[],min,max,unit='%',esColor=true,soft}){
+  charts[id]?.destroy();
+  const labels=rows.map(r=>r.c);
+  const ds=[{type:'bar',label:val.label,data:rows.map(r=>r[val.k]),order:2,
+    backgroundColor:rows.map(r=>esColor&&r.c===ES?css('--garnet'):(soft&&soft(r)?css('--petrol-soft'):css('--petrol'))),
+    borderColor:rows.map(r=>soft&&soft(r)?css('--petrol'):'transparent'),borderWidth:rows.map(r=>soft&&soft(r)?1:0),
+    borderRadius:3,borderSkipped:'start',barPercentage:.78,categoryPercentage:.9}];
+  dots.forEach(d=>ds.push({type:'line',label:d.label,data:rows.map(r=>r[d.k]),showLine:false,order:1,
+    pointRadius:d.r||4.5,pointHoverRadius:6,pointStyle:'circle',pointBackgroundColor:d.fill,pointBorderColor:d.stroke,pointBorderWidth:d.bw||1.5}));
+  return charts[id]=new Chart(document.getElementById(id),{data:{labels,datasets:ds},options:{indexAxis:'y',maintainAspectRatio:false,
+    interaction:{mode:'index',axis:'y',intersect:false},
+    plugins:{legend:{display:false},tooltip:{...tip(),callbacks:{label:c=>c.raw==null?null:`${c.dataset.label}: ${fmt(c.raw,unit==='%PIB'?2:1)}${unit==='%PIB'?'% del PIB':'%'}`}}},
+    scales:{x:{min,max,grid:{color:(c)=>c.tick.value===0?css('--muted'):css('--grid')},ticks:{callback:v=>v+'%'}},y:{grid:{display:false},ticks:tickFont(labels)}}}});
+}
+function table(el,cols,rows){
+  el.innerHTML='<table><thead><tr>'+cols.map(c=>`<th>${c[0]}</th>`).join('')+'</tr></thead><tbody>'+
+    rows.map(r=>'<tr>'+cols.map((c,i)=>`<td>${i?fmt(r[c[1]]):r[c[1]]}</td>`).join('')+'</tr>').join('')+'</tbody></table>';
+}
+
+/* 2. creixement */
+let f2mode='a';
+function drawC2(){
+  const rows=f2mode==='a'?D.assets:D.contrib;
+  hbar('c2',rows,{val:{k:'v',label:'2025'},dots:[{k:'lt',label:'Mitjana a llarg termini',fill:css('--fg'),stroke:css('--surface')}],min:-12,max:40});
+  document.getElementById('f2title').textContent=f2mode==='a'?'Creixement nominal dels actius, 2025':'Creixement nominal de les aportacions, 2025';
+  document.getElementById('c2box').style.height=(rows.length*19+50)+'px';
+  table(document.getElementById('t2'),[['País','c'],['2025 (%)','v'],['Llarg termini (%)','lt']],rows);
+}
+/* 3. rendiments */
+function drawC3(){
+  hbar('c3',D.returns,{val:{k:'v',label:'2025'},dots:[{k:'a10',label:'Mitjana 10 anys',fill:css('--fg'),stroke:css('--surface')},{k:'a20',label:'Mitjana 20 anys',fill:css('--surface'),stroke:css('--fg'),bw:2,r:4}],min:-8,max:16});
+  table(document.getElementById('t3'),[['País','c'],['2025','v'],['10 anys','a10'],['20 anys','a20']],D.returns);
+}
+/* 4. comissions */
+function drawC4(){
+  hbar('c4',D.fees,{val:{k:'v',label:'Comissió'},min:0,max:2,soft:r=>!r.o&&r.c!==ES});
+}
+/* 5. bretxa */
+let f5mode='g';
+function drawC5(){
+  const leg=document.getElementById('f5leg'),T=document.getElementById('f5title');
+  if(f5mode==='g'){
+    hbar('c5',D.gap,{val:{k:'v',label:'Bretxa'},min:0,max:22});
+    T.textContent='Bretxa de cotització, homes assalariats amb salari mitjà';
+    leg.innerHTML='<span><i style="background:var(--petrol)"></i>Bretxa, % del salari</span><span><i style="background:var(--garnet)"></i>Espanya (bretxa zero)</span>';
+    table(document.getElementById('t5'),[['País','c'],['Bretxa (%)','v']],D.gap);
+    document.getElementById('c5box').style.height=(D.gap.length*19+50)+'px';
+  }else if(f5mode==='s'){
+    hbar('c5',D.sex,{val:{k:'m',label:'Homes'},dots:[{k:'w',label:'Dones',fill:css('--garnet'),stroke:css('--surface'),r:5.5}],min:0,max:28,esColor:false});
+    T.textContent='Bretxa de cotització per sexe, assalariats amb salari mitjà';
+    leg.innerHTML='<span><i style="background:var(--petrol)"></i>Homes</span><span><i class="dot" style="background:var(--garnet)"></i>Dones</span><span style="opacity:.8">Només països on la bretxa difereix</span>';
+    table(document.getElementById('t5'),[['País','c'],['Homes (%)','m'],['Dones (%)','w']],D.sex);
+    document.getElementById('c5box').style.height=(D.sex.length*24+50)+'px';
+  }else{
+    hbar('c5',D.self,{val:{k:'e',label:'Assalariats'},dots:[{k:'s',label:'Autònoms',fill:css('--garnet'),stroke:css('--surface'),r:5.5}],min:0,max:28,esColor:false});
+    T.textContent='Bretxa de cotització per tipus d\'ocupació, homes amb ingressos mitjans';
+    leg.innerHTML='<span><i style="background:var(--petrol)"></i>Assalariats</span><span><i class="dot" style="background:var(--garnet)"></i>Autònoms</span><span style="opacity:.8">Només països on la bretxa difereix</span>';
+    table(document.getElementById('t5'),[['País','c'],['Assalariats (%)','e'],['Autònoms (%)','s']],D.self);
+    document.getElementById('c5box').style.height=(D.self.length*20+50)+'px';
+  }
+}
+/* 6. defuncions (vertical) */
+function drawC6(){
+  charts.c6?.destroy();
+  const labels=D.death.map(r=>r.c);
+  charts.c6=new Chart(document.getElementById('c6'),{type:'bar',data:{labels,datasets:[{label:'Pagaments per defunció',data:D.death.map(r=>r.v),
+    backgroundColor:labels.map(l=>l===ES?css('--garnet'):css('--petrol')),borderRadius:{topLeft:3,topRight:3},borderSkipped:false,barPercentage:.8}]},
+    options:{maintainAspectRatio:false,plugins:{legend:{display:false},tooltip:{...tip(),callbacks:{label:c=>`${fmt(c.raw,2)}% del PIB`}}},
+      scales:{x:{grid:{display:false},ticks:{...tickFont(labels),maxRotation:60,minRotation:45,font:(c)=>({size:11,weight:labels[c.index]===ES?'700':'400'})}},y:{beginAtZero:true,max:.8,ticks:{callback:v=>fmt(v)+'%'}}}}});
+}
+
+const T21=[['Sou baix, assalariat, home','80%',33,8.6],['Sou baix, assalariada, dona','80%',33,9.5],['Sou mitjà, assalariat, home','70%',32,9.7],['Sou mitjà, assalariada, dona','70%',32,10.8],['Sou mitjà, autònom, home','70%',38,13.1],['Sou alt, assalariat, home','60%',33,9.7],['Sou alt, assalariada, dona','60%',34,10.4]];
+document.getElementById('t21').innerHTML=T21.map(r=>`<tr><td>${r[0]}</td><td>${r[1]}</td><td>${r[2]}</td><td><span class="bar-in" style="width:${r[3]*6}px"></span>${fmt(r[3])}%</td></tr>`).join('');
+
+function seg(ids,set){ids.forEach(([id,val])=>document.getElementById(id).addEventListener('click',()=>{ids.forEach(([j])=>document.getElementById(j).setAttribute('aria-pressed',j===id));set(val);}));}
+seg([['f1-usd','usd'],['f1-gdp','gdp']],v=>{f1mode=v;drawC1()});
+seg([['f2-a','a'],['f2-c','c']],v=>{f2mode=v;drawC2()});
+seg([['f5-g','g'],['f5-s','s'],['f5-e','e']],v=>{f5mode=v;drawC5()});
+
+function drawAll(){if(!window.Chart)return;base();drawC1();drawC2();drawC3();drawC4();drawC5();drawC6();}
+drawAll();
+try{matchMedia('(prefers-color-scheme: dark)').addEventListener('change',drawAll);}catch(e){}
+new MutationObserver(drawAll).observe(document.documentElement,{attributes:true,attributeFilter:['data-theme']});
+</script>
+
+</body></html>
